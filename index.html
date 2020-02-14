@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Калькулятор</title>
+<style>
+ body {
+    background: url(1.jpg); 
+    background-position: center top;
+    background-size: cover;
+	display:flex;
+   }
+   
+.mains {
+margin: auto;
+}   
+</style>
+  </head>
+  <body>
+
+
+
+<div class="mains">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Множення</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Ділення</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">Віднімання</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">Додавання</button>
+</div>
+
+<!-- Modal -->
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Множення двух чисел</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+		<div class="modal-body">
+			<div class="form-group">
+
+				<label for="multi_1">Число 1:</label>
+				 <input type="text" class="form-control" id="multi_1">
+				<label for="multi_2">Число 2:</label>
+				 <input type="text" class="form-control" id="multi_2">
+			</div>
+		<button onclick="multi()"  class="btn btn-primary" >Помножити</button>
+		</div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ділення двух чисел</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+		<div class="modal-body">
+			<div class="form-group">
+
+				<label for="dil_1">Число 1:</label>
+				 <input type="text" class="form-control" id="dil_1">
+				<label for="dil_2">Число 2:</label>
+				 <input type="text" class="form-control" id="dil_2">
+			</div>
+		<button onclick="dil()"  class="btn btn-primary" >Поділити</button>
+		</div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Віднімання двух чисел</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+		<div class="modal-body">
+			<div class="form-group">
+
+				<label for="minus_1">Число 1:</label>
+				 <input type="text" class="form-control" id="minus_1">
+				<label for="minus_2">Число 2:</label>
+				 <input type="text" class="form-control" id="minus_2">
+			</div>
+		<button onclick="minus()"  class="btn btn-primary" >Відняти</button>
+		</div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Додавання двух чисел</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+		<div class="modal-body">
+			<div class="form-group">
+
+				<label for="sum_1">Число 1:</label>
+				 <input type="text" class="form-control" id="sum_1">
+				<label for="sum_2">Число 2:</label>
+				 <input type="text" class="form-control" id="sum_2">
+			</div>
+		<button onclick="sum()"  class="btn btn-primary" >Додати</button>
+		</div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+function multi(){
+alert(document.getElementById('multi_1').value*document.getElementById('multi_2').value);
+}
+
+function dil(){
+alert(document.getElementById('dil_1').value/document.getElementById('dil_2').value);
+}
+
+function minus(){
+alert(document.getElementById('minus_1').value-document.getElementById('minus_2').value);
+}
+
+function sum(){
+alert(document.getElementById('sum_1').value+document.getElementById('sum_2').value);
+}
+</script> 
+ </body>
+</html>
